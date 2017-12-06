@@ -1,7 +1,9 @@
-var x = prompt("Введите год","");
-if (x<1 || x>2017 || x.charAt(0)==="0"){
-	alert("Год введён неверно");
+function century(year){
+if (year<1 || year>2017){
+	return false;
 }
 else{
-	alert("Это " + Math.ceil(Number(x)/100) + "-й век");
+	return Math.ceil(year / 100);
 }
+}
+century(1270);
