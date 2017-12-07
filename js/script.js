@@ -1,9 +1,4 @@
-function century(year){
-if (year<1 || year>2017){
-	return false;
+function mas(n){
+	return Math.ceil((Math.pow(n+(n-1),2))/2);
 }
-else{
-	return Math.ceil(year / 100);
-}
-}
-century(1270);
+mas(3);
