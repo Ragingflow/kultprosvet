@@ -1,4 +1,10 @@
-function mas(n){
-	return Math.ceil((Math.pow(n+(n-1),2))/2);
+function list(n){
+var reg = /(<h2.*?><\/\S>(.*?)<\/h2?>)/igm;
+var arr; 
+var result= '';
+while((arr=reg.exec(n))!== null){
+result += '<li>'+arr[2]+'</li>';
+} 
+return '<ul>'+result+'</ul>';
 }
-mas(3);
+list(htmlContent);
